@@ -78,7 +78,7 @@ export function WelcomeSection() {
       <div className="flex flex-col gap-8 items-center justify-center ">
         <div className="grid  md:grid-cols-2 gap-4 w-full h-full items-start justify-center align-middle">
           <img
-            src="/public/ben2021.png"
+            src="/ben2021.png"
             alt="Ben Hawker"
             width={400}
             height={400}
