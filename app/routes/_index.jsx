@@ -128,12 +128,8 @@ function ScrollingWordsStacked({ words }) {
             >
               <div
                 className={`text-4xl md:text-5xl font-bold   ${
-                  index === 0
-                    ? "  text-lime-300"
-                    : index < wordsToDisplay.length / 2
-                    ? " text-lime-300"
-                    : index < wordsToDisplay.length * 0.9
-                    ? "text-lime-700"
+                  index < wordsToDisplay.length * 0.9
+                    ? " text-lime-500"
                     : "   text-black hover:text-lime-900"
                 }`}
               >
