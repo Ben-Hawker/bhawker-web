@@ -44,7 +44,7 @@ export default function Index() {
           <ScrollingWordsStacked words={thingIDo} />
         </div>
       </PageBodyContainer>
-      <div className="flex flex-col items-center justify-center bg-orange-200 w-full p-4">
+      <div className="flex flex-col items-center justify-center bg-orange-200 border-t border-t-orange-600 w-full p-4">
         <PageBodyContainer>
           <div className="flex flex-col items-start justify-start  w-full p-2">
             <h2 className="text-3xl font-semibold mb-4 text-black ">
