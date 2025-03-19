@@ -8,11 +8,13 @@ export function Header() {
           <div className="text-4xl text-orange-600 font-bold">Ben Hawker.</div>
         </a>
         <nav className="flex space-x-4">
-          <Link to="/" className="hover:text-gray-400">
-            Home
-          </Link>
-          <Link to="/contact" className="hover:text-gray-400">
-            Contact
+          <Link
+            to="/contact"
+            className={
+              " bg-black px-4 py-2 text-lime-50  font-bold uppercase border border-lime-50 rounded-full shadow-xl hover:bg-lime-50 hover:text-black hover:shadow-lg transition-all duration-300 ease-in-out"
+            }
+          >
+            get in touch
           </Link>
         </nav>
       </div>
