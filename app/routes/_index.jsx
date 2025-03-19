@@ -76,11 +76,13 @@ export function WelcomeSection() {
   return (
     <div className="flex flex-col items-center justify-center w-full h-full p-4 md:py-12">
       <div className="flex flex-col gap-8 items-center justify-center ">
-        <div className="grid  md:grid-cols-2 gap-4 w-full h-full items-center justify-center align-middle">
+        <div className="grid  md:grid-cols-2 gap-4 w-full h-full items-start justify-center align-middle">
           <img
             src="/public/ben2021.png"
             alt="Ben Hawker"
-            className="rounded-md  object-cover shadow-lg"
+            width={400}
+            height={400}
+            className="rounded-md  object-cover shadow-lg w-full"
           />
           <div className="prose">
             <h2 className="text-4xl font-bold text-lime-50 ">Hi, I'm Ben.</h2>
