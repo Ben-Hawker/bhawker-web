@@ -13,7 +13,7 @@ export function Header() {
           <Link
             to="/contact"
             className={
-              " bg-black px-4 py-2 text-lime-50  font-bold uppercase border border-lime-50 rounded-full shadow-xl hover:bg-lime-50 hover:text-black hover:shadow-lg transition-all duration-300 ease-in-out"
+              " bg-black px-4 py-2 text-lime-50  font-bold uppercase border border-lime-50 rounded-full shadow-xl hover:bg-lime-50 hover:text-black hover:shadow-lg transition-all duration-300 ease-in-out "
             }
           >
             get in touch

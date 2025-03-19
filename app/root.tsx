@@ -26,7 +26,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body className="bg-lime-50 bg-opacity-10">
         <Header />
-        <div className="min-h-screen">{children}</div>
+        <div className="min-h-screen h-min">{children}</div>
         <ScrollRestoration />
         <Scripts />
         <Analytics />

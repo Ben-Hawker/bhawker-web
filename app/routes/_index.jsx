@@ -38,28 +38,26 @@ export async function loader() {
 export default function Index() {
   const { thingIDo } = useLoaderData();
   return (
-    <div className="w-full flex flex-col gap-8 items-center justify-center ">
+    <div className="w-full flex flex-col gap-0 items-center justify-center h-full">
       <PageBodyContainer>
-        <div className="p-4 grid md:grid-cols-1 justify-center gap-8 w-full">
+        <div className="p-4 py-12 flex flex-col justify-center gap-8 w-full md:min-h-[600px]  h-max items-start">
           <ScrollingWordsStacked words={thingIDo} />
+          <Link
+            to={"/contact"}
+            className={
+              "  bg-orange-600 px-4 py-2 text-lime-50 text-3xl font-bold uppercase border border-lime-50 rounded-full shadow-xl hover:bg-lime-50 hover:text-black hover:shadow-lg transition-all duration-300 ease-in-out"
+            }
+          >
+            Contact me
+          </Link>
         </div>
       </PageBodyContainer>
-      <div className="flex flex-col items-center justify-center bg-orange-200 border-t border-t-orange-600 w-full p-4">
+      <div className="py-12 flex flex-col gap-4 items-center justify-center bg-black w-full border-t border-t-orange-600">
+        <h2 className=" text-5xl font-bold text-left text-lime-50">
+          About me.
+        </h2>
         <PageBodyContainer>
-          <div className="flex flex-col items-start justify-start  w-full p-2">
-            <h2 className="text-3xl font-semibold mb-4 text-black ">
-              Want to chat?
-            </h2>
-
-            <Link
-              to={"/contact"}
-              className={
-                "  bg-black px-4 py-2 text-lime-50 text-3xl font-bold uppercase border border-lime-50 rounded-full shadow-xl hover:bg-lime-50 hover:text-black hover:shadow-lg transition-all duration-300 ease-in-out"
-              }
-            >
-              Contact me
-            </Link>
-          </div>
+          <WelcomeSection />
         </PageBodyContainer>
       </div>
     </div>
@@ -70,6 +68,75 @@ export function PageBodyContainer({ children }) {
   return (
     <div className=" w-full max-w-7xl  flex justify-between items-center ">
       {children}
+    </div>
+  );
+}
+
+export function WelcomeSection() {
+  return (
+    <div className="flex flex-col items-center justify-center w-full h-full p-4 md:py-12">
+      <div className="flex flex-col gap-8 items-center justify-center ">
+        <div className="grid  md:grid-cols-2 gap-4 w-full h-full items-center justify-center align-middle">
+          <img
+            src="/public/ben2021.png"
+            alt="Ben Hawker"
+            className="rounded-md  object-cover shadow-lg"
+          />
+          <div className="prose">
+            <h2 className="text-4xl font-bold text-lime-50 ">Hi, I'm Ben.</h2>
+            <p className="text-lg text-lime-50">
+              I started building websites back in 2012 and I haven't stopped
+              since.
+            </p>
+            <p className="text-lg text-lime-50">
+              It all began back in Bath, England, where I was born and raised.
+              At school, I was the kid who spent more time tinkering with Flash,
+              Dreamweaver and Visual Basic than studying. I was always
+              fascinated by how things worked, and I loved the idea of creating
+              something from nothing. I remember spending hours experimenting
+              with different programming languages and tools, trying to figure
+              out how to make my ideas come to life.
+            </p>
+            <p className="text-lg text-lime-50">
+              I went on to complete my bachelors degree in Computer Science at
+              the University of Bath. The highlight of my studies was building
+              EyeSynth, a musical instrument designed using eye gaze tracking
+              helping people with motorneurone disease play electronic music.
+              This project helped me understand the importance of user-centred
+              design and how technology can be used to improve people's lives.
+            </p>
+            <p className="text-lg text-lime-50">
+              Soon after graduating, I started building websites for friends and
+              family, where I moved on to building websites for local businesses
+              in Bath. I quickly realised that I had a passion for creating
+              beautiful, functional websites that not only looked great but also
+              provided a seamless user experience.
+            </p>
+            <p className="text-lg text-lime-50">
+              Since then, I've had the opportunity to work on a wide range of
+              projects, from e-commerce websites to interactive web
+              applications, with a range of clients. I love the challenge of
+              taking a vision and turning it into a reality, and I'm always
+              looking for new ways to push the boundaries of what's possible on
+              the web, whilst also keeping up with the latest trends and
+              technologies.
+            </p>
+            <p className="text-lg text-lime-50">
+              Since 2021, I've been working full time as the Head of Technology
+              at Field Doctor, where I was part of the founding team.
+            </p>
+            <p className="text-xl text-lime-50">~ Ben</p>
+          </div>
+        </div>
+
+        <div className=" hidden bg-white p-8 rounded-lg shadow-lg max-w-lg prose">
+          <h2 className="text-4xl font-bold text-black">Hi, I'm Ben.</h2>
+          <p className="text-lg text-black">
+            I started building websites back in 2012 and I haven't stopped
+            since.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
