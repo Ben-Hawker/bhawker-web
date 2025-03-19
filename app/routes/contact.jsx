@@ -14,7 +14,6 @@ export default function Contact() {
             Contact me.
           </h1>
           <div className={"flex flex-col gap-4 items-start justify-center"}>
-            <h2 className="text-left w-full text-2xl">My details</h2>
             <p className="text-left w-full text-lg">
               If you want to get in touch, feel free to reach out via email.
             </p>

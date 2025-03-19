@@ -35,7 +35,7 @@ export async function loader() {
 export default function Index() {
   const { thingIDo } = useLoaderData();
   return (
-    <div className="w-full flex flex-col gap-0 items-center justify-center ">
+    <div className="w-full flex flex-col gap-8 items-center justify-center ">
       <PageBodyContainer>
         <div className="p-4 grid md:grid-cols-1 justify-center gap-8 w-full">
           <ScrollingWordsStacked words={thingIDo} />
@@ -43,7 +43,7 @@ export default function Index() {
       </PageBodyContainer>
       <div className="flex flex-col items-center justify-center bg-orange-200 w-full p-4">
         <PageBodyContainer>
-          <div className="flex flex-col items-start justify-start  w-full p-4">
+          <div className="flex flex-col items-start justify-start  w-full p-2">
             <h2 className="text-3xl font-semibold mb-4 text-black ">
               Want to chat?
             </h2>
