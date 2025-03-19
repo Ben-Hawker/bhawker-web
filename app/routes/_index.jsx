@@ -3,18 +3,21 @@ import { useEffect, useRef, useState } from "react";
 
 export const meta = () => {
   return [
-    { title: "Ben Hawker | Technology" },
-    { name: "description", content: "" },
+    { title: "Ben Hawker | bhawker.co.uk" },
+    {
+      name: "description",
+      content:
+        "I am a web developer and designer who builds things that make a difference.",
+    },
   ];
 };
 
 export async function loader() {
   const thingIDo = [
-    "I build things.",
+    "I build.",
     "I write code.",
-    "I design stuff.",
+    "I design.",
     "I make things work.",
-    "I find solutions.",
     "I solve problems.",
     "I strategise.",
     "I innovate.",
