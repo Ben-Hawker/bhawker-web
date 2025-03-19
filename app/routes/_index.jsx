@@ -133,6 +133,7 @@ export function ScrollingWordsStacked({ words }) {
                   : "opacity-70 hover:opacity-100"
               }`}
             >
+              {index == wordsToDisplay.length - 1 ? <br /> : null}
               <div
                 className={`text-4xl md:text-5xl font-bold   ${
                   index < wordsToDisplay.length * 0.9
@@ -144,12 +145,13 @@ export function ScrollingWordsStacked({ words }) {
               </div>
             </div>
           ))}
-          {wordsToDisplay.slice(activeIndex + 1).map((skill, index) => {
+          {wordsToDisplay.slice(activeIndex + 1).map((skill, index, array) => {
             return (
               <div
                 key={index}
                 className={`transform transition-all duration-500 ease-in-out text-left opacity-30`}
               >
+                {skill?.includes("developer and des") ? <br /> : null}
                 <div
                   className={`text-4xl md:text-5xl font-bold rounded-lg   ${" text-neutral-200"}`}
                 >
