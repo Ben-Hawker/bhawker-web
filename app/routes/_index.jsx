@@ -50,6 +50,7 @@ export default function Index() {
             <h2 className="text-3xl font-semibold mb-4 text-black ">
               Want to chat?
             </h2>
+
             <Link
               to={"/contact"}
               className={
@@ -73,7 +74,7 @@ export function PageBodyContainer({ children }) {
   );
 }
 
-function ScrollingWordsStacked({ words }) {
+export function ScrollingWordsStacked({ words }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const containerRef = useRef(null);
   const [wordsToDisplay, setWordsToDisplay] = useState(
