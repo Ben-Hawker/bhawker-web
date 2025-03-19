@@ -6,6 +6,14 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import { Analytics } from "@vercel/analytics/react";
+import type { LinksFunction } from "@remix-run/node";
+import stylesheet from "~/tailwind.css?url";
+import {Header} from "~/components/Header";
+
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: stylesheet },
+];
+
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -16,7 +24,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="bg-lime-50 bg-opacity-10">
+        <Header />
         {children}
         <ScrollRestoration />
         <Scripts />

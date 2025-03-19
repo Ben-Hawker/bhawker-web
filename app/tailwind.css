@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@plugin "@tailwindcss/typography"
+
+
+
+.container {
+    overflow: hidden;
+    height: 600px;
+  }
+  
+  .sliding-background {
+    --imageHeight: 60px;
+    height: calc(var(--imageHeight) * 2);
+    animation: slide 4s linear infinite;
+  }
+  
+  @keyframes slide { 
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(calc(var(--imageHeight) * -1));
+    }
+  }
