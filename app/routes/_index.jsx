@@ -57,7 +57,7 @@ export default function Index() {
         </div>
       </PageBodyContainer>
       <div className="py-12 flex flex-col gap-4 items-center justify-center bg-lime-50 bg-opacity-10 w-full border-t border-t-orange-600">
-        <h2 className=" text-5xl font-bold text-left text-black">
+        <h2 className=" text-5xl font-bold text-left text-black mx-4">
           Ramblings of late.
         </h2>
         <PageBodyContainer>
