@@ -56,18 +56,20 @@ export default function Index() {
           </Link>
         </div>
       </PageBodyContainer>
+      <div className="py-12 flex flex-col gap-4 items-center justify-center bg-lime-50 bg-opacity-10 w-full border-t border-t-orange-600">
+        <h2 className=" text-5xl font-bold text-left text-black">
+          Ramblings of late.
+        </h2>
+        <PageBodyContainer>
+          <BlogArticles />
+        </PageBodyContainer>
+      </div>
       <div className="py-12 flex flex-col gap-4 items-center justify-center bg-black w-full border-t border-t-orange-600">
         <h2 className=" text-5xl font-bold text-left text-lime-50">
           About me.
         </h2>
         <PageBodyContainer>
           <WelcomeSection />
-        </PageBodyContainer>
-      </div>
-      <div className="py-12 flex flex-col gap-4 items-center justify-center bg-lime-50 bg-opacity-10 w-full border-t border-t-orange-600">
-        <h2 className=" text-5xl font-bold text-left text-black">Ramblings.</h2>
-        <PageBodyContainer>
-          <BlogArticles />
         </PageBodyContainer>
       </div>
     </div>
