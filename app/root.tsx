@@ -4,12 +4,17 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLoaderData,
 } from "@remix-run/react";
 import { Analytics } from "@vercel/analytics/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesheet from "~/tailwind.css?url";
 import {Header} from "~/components/Header";
 
+
+export async function loader() {
+ return null;
+}
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
 ];
@@ -50,3 +55,5 @@ export function Footer() {
 export default function App() {
   return <Outlet />;
 }
+
+

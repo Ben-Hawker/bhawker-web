@@ -1,5 +1,6 @@
 import { Link, useLoaderData } from "@remix-run/react";
 import { useEffect, useRef, useState } from "react";
+import { getBlogArticles } from "~/components/api/BlogArticles.server";
 
 export const meta = () => {
   return [
@@ -30,8 +31,11 @@ export async function loader() {
     "I am a web developer and designer who builds things that make a difference.",
   ];
 
+  const { blogArticles } = await getBlogArticles();
+
   return {
     thingIDo,
+    blogArticles,
   };
 }
 
@@ -58,6 +62,12 @@ export default function Index() {
         </h2>
         <PageBodyContainer>
           <WelcomeSection />
+        </PageBodyContainer>
+      </div>
+      <div className="py-12 flex flex-col gap-4 items-center justify-center bg-lime-50 bg-opacity-10 w-full border-t border-t-orange-600">
+        <h2 className=" text-5xl font-bold text-left text-black">Ramblings.</h2>
+        <PageBodyContainer>
+          <BlogArticles />
         </PageBodyContainer>
       </div>
     </div>
@@ -231,6 +241,54 @@ export function ScrollingWordsStacked({ words }) {
           })}
         </div>
       </div>
+    </div>
+  );
+}
+
+export function BlogArticles() {
+  const { blogArticles } = useLoaderData();
+  console.log(blogArticles);
+  const publishedDateToUKDate = (date) => {
+    const options = {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    };
+    return new Date(date).toLocaleDateString("en-GB", options);
+  };
+  return (
+    <div className="container mx-auto p-4">
+      <ul className="flex flex-row items-center gap-4">
+        {blogArticles?.map((article) => (
+          <li
+            key={article.id}
+            className="w-full max-w-md bg-black border rounded-sm shadow-xl border-orange-600 mb-2"
+          >
+            <Link
+              to={`/articles/${article.slug}`}
+              className=" hover:underline decoration-orange-600 "
+            >
+              <img
+                src={article.featuredImage.url}
+                alt={article.title}
+                className="rounded-none object-cover w-full max-h-64"
+                width={400}
+                height={300}
+              />
+              <div className=" p-12 text-lime-50 flex flex-col gap-2">
+                <h2 className="text-2xl font-bold text-lime-500">
+                  {article.title}
+                </h2>
+                <p className="text-sm">
+                  {publishedDateToUKDate(article.publishedAt)}
+                </p>
+                <p className="">{article.subtitle}</p>
+                <span className="underline">read more</span>
+              </div>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
