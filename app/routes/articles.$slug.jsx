@@ -8,6 +8,7 @@ export async function loader({ params }) {
       blogArticles {
         slug
         stage
+        subtitle
         publishedAt
         updatedAt
         createdAt
@@ -49,6 +50,8 @@ export async function loader({ params }) {
 }
 
 export function Breadcrumbs() {
+  const { blogArticle } = useLoaderData();
+  const { title } = blogArticle;
   return (
     <>
       <div className="py-4">
@@ -61,7 +64,7 @@ export function Breadcrumbs() {
             Articles
           </a>
           <span className="text-gray-500">/</span>
-          <span className="text-gray-500">Blog Article</span>
+          <span className="text-gray-500">{title}</span>
         </nav>
       </div>
     </>
@@ -70,14 +73,17 @@ export function Breadcrumbs() {
 export default function BlogArticle() {
   const { blogArticle } = useLoaderData();
   return (
-    <div className="flex max-w-[1660px] items-center justify-center m-auto p-4 py-12">
-      <div className="flex flex-col gap-0 max-w-prose text-black">
+    <div className="flex flex-col max-w-7xl  items-center justify-center m-auto p-4 py-12">
+      <div className="w-full">
         <Breadcrumbs />
-        <div className="flex flex-col gap-4 max-w-prose bg-black p-4 ">
-          <h1 className="text-4xl font-bold text-lime-500">
+      </div>
+
+      <div className="flex flex-col justify-center items-center gap-0 text-black max-w-prose">
+        <div className="flex flex-col gap-4  w-full pt-8 pb-8  m-auto  border-b border-orange-600 mb-8">
+          <h1 className="text-5xl font-bold text-black pb-8 w-full border-b border-orange-600 mb-4">
             {blogArticle.title}
           </h1>
-          <p className=" text-lime-50">{blogArticle.subtitle}</p>
+          <p className="text-black">{blogArticle.subtitle}</p>
         </div>
         <img
           src={blogArticle.featuredImage.url}

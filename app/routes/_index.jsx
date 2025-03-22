@@ -57,9 +57,7 @@ export default function Index() {
         </div>
       </PageBodyContainer>
       <div className="py-12 flex flex-col gap-4 items-center justify-center bg-lime-50 bg-opacity-10 w-full border-t border-t-orange-600">
-        <h2 className=" text-5xl font-bold text-left text-black mx-4">
-          Ramblings of late.
-        </h2>
+        <h2 className=" text-5xl font-bold text-left text-black mx-4">Blog.</h2>
         <PageBodyContainer>
           <BlogArticles />
         </PageBodyContainer>
@@ -88,7 +86,7 @@ export function WelcomeSection() {
   return (
     <div className="flex flex-col items-center justify-center w-full h-full p-4 md:py-12">
       <div className="flex flex-col gap-8 items-center justify-center ">
-        <div className="grid  md:grid-cols-2 gap-4 w-full h-full items-start justify-center align-middle">
+        <div className="grid  md:grid-cols-2 gap-12 w-full h-full items-start justify-center align-middle">
           <img
             src="/ben2021.png"
             alt="Ben Hawker"

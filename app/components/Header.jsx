@@ -1,4 +1,4 @@
-import { Link } from "@remix-run/react";
+import { Link, NavLink } from "@remix-run/react";
 
 export function Header() {
   return (
@@ -9,7 +9,16 @@ export function Header() {
             Ben Hawker.
           </div>
         </a>
-        <nav className="flex space-x-4">
+        <nav className="flex space-x-4 flex-row gap-4 items-center">
+          <Link to="/" className="text-black hover:text-gray-400 font-bold">
+            Home
+          </Link>
+          <Link
+            to="/articles"
+            className="text-black hover:text-gray-400 font-bold "
+          >
+            Blog
+          </Link>
           <Link
             to="/contact"
             className={
