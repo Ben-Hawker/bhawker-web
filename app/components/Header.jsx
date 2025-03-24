@@ -9,7 +9,7 @@ export function Header() {
             Ben Hawker.
           </div>
         </a>
-        <nav className="flex space-x-4 flex-row gap-4 items-center">
+        <nav className="flex space-x-4 flex-row gap-2 md:gap-4 items-center">
           <Link to="/" className="text-black hover:text-gray-400 font-bold">
             Home
           </Link>
@@ -21,8 +21,14 @@ export function Header() {
           </Link>
           <Link
             to="/contact"
+            className="text-black hover:text-gray-400 font-bold "
+          >
+            Contact
+          </Link>
+          <Link
+            to="/contact"
             className={
-              " bg-black px-4 py-2 text-lime-50  font-bold uppercase border border-lime-50 rounded-full shadow-xl hover:bg-lime-50 hover:text-black hover:shadow-lg transition-all duration-300 ease-in-out "
+              " hidden md:flex bg-black px-4 py-2 text-lime-50  font-bold uppercase border border-lime-50 rounded-full shadow-xl hover:bg-lime-50 hover:text-black hover:shadow-lg transition-all duration-300 ease-in-out "
             }
           >
             get in touch

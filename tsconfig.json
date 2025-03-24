@@ -1,5 +1,5 @@
 {
-  "include": ["**/*.ts", "**/*.tsx", "app/routes/_index.jsx"],
+  "include": ["**/*.ts", "**/*.tsx","**/*.js", "**/*.jsx", "app/routes/_index.jsx"],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2022"],
     "types": ["@vercel/remix", "node", "vite/client"],
