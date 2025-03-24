@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { sequencerToneJs } from "../components/tools/music";
-import { E } from "build/client/assets/components-DwPCA6_6";
 
 export async function loader() {
   return null;
